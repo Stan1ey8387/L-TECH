@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="L_TECH" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="HUC-j6-4Zf">
+                                <rect key="frame" x="50" y="40" width="220" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="h5x-9E-mdR"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="oXN-AA-dDx">
+                                <rect key="frame" x="50" y="244" width="220" height="80"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Phone number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gf6-8s-sSA">
+                                        <rect key="frame" x="0.0" y="0.0" width="220" height="30"/>
+                                        <color key="backgroundColor" red="0.8975055520304569" green="0.8975055520304569" blue="0.8975055520304569" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="phonePad"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="JfE-De-0Lu"/>
+                                        </connections>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Imq-nd-Bdl">
+                                        <rect key="frame" x="0.0" y="50" width="220" height="30"/>
+                                        <color key="backgroundColor" red="0.89799207448959351" green="0.89807194471359253" blue="0.89792543649673462" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="BYZ-38-t0r" id="5L4-Wb-9ka"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PV1-fV-Ils">
+                                <rect key="frame" x="120" y="454" width="80" height="34"/>
+                                <color key="backgroundColor" red="0.0003987467207480222" green="0.63474512100219727" blue="0.86234956979751587" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="kaR-Pp-kTY"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="0.89799207449999996" green="0.89807194469999996" blue="0.89792543650000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="singinButtonAction" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZPj-VK-wlV"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="i5A-qH-cps">
+                                <rect key="frame" x="150" y="204" width="20" height="20"/>
+                                <color key="color" red="0.052765004336833954" green="0.39143502712249756" blue="0.68589240312576294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="HUC-j6-4Zf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="G3V-ZD-GYh"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oXN-AA-dDx" secondAttribute="trailing" constant="50" id="J8j-C3-zfU"/>
+                            <constraint firstItem="PV1-fV-Ils" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lg2-JX-fah"/>
+                            <constraint firstItem="HUC-j6-4Zf" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="UeQ-tT-FX6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HUC-j6-4Zf" secondAttribute="trailing" constant="50" id="cyr-Np-d3a"/>
+                            <constraint firstItem="oXN-AA-dDx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="jJA-6q-o5U"/>
+                            <constraint firstItem="i5A-qH-cps" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="se0-yl-ZbQ"/>
+                            <constraint firstItem="oXN-AA-dDx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vtg-Mo-KJD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="PV1-fV-Ils" secondAttribute="bottom" constant="80" id="wKm-cF-1jL"/>
+                            <constraint firstItem="oXN-AA-dDx" firstAttribute="top" secondItem="i5A-qH-cps" secondAttribute="bottom" constant="20" id="x4M-jO-fg3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="i5A-qH-cps" id="ixB-BZ-Xa2"/>
+                        <outlet property="passwordTextField" destination="Imq-nd-Bdl" id="4AN-9Y-2XO"/>
+                        <outlet property="phoneTextField" destination="Gf6-8s-sSA" id="fBH-Rx-bwk"/>
+                        <outlet property="signinButton" destination="PV1-fV-Ils" id="Zh0-hw-CSY"/>
+                        <segue destination="Fl8-13-dDi" kind="showDetail" identifier="FeedSeque" action="showViewController:sender:" id="dOc-mW-902"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+        <!--FeedNavigationController-->
+        <scene sceneID="iqc-YS-IDP">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Feed" referencedIdentifier="FeedNavigationController" id="Fl8-13-dDi" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6mU-eJ-YKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727" y="375"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Logo" width="470" height="250"/>
+    </resources>
+</document>

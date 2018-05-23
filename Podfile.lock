@@ -1,0 +1,15 @@
+PODS:
+  - InputMask (2.2.6)
+  - Kingfisher (4.6.4)
+
+DEPENDENCIES:
+  - InputMask
+  - Kingfisher
+
+SPEC CHECKSUMS:
+  InputMask: 756ffc515121d07a9c81a605fa5c44e5ac5bde13
+  Kingfisher: 68498a706e46c2a050b0c9572f100e5db407f6e0
+
+PODFILE CHECKSUM: 13b2d3e8d8be95a52a579a7927f0c05da4e4968c
+
+COCOAPODS: 1.4.0
