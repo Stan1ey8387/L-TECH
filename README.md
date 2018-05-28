@@ -1,5 +1,5 @@
 My first experience with RxSwift
 
-##TODO: 
+**TODO:**
 Coordinator
 Driver
